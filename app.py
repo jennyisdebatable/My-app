@@ -39,7 +39,7 @@ if temp >= 80:
     st.sidebar.success("축하해요! 고래가 나타났어요! 🎉")
 
 # --- 메인 화면 ---
-st.title("🪴 바른 마음 프로젝트")
+st.title("🪴 우리반 배려 프로젝트")
 st.write("오늘 우리 반을 위해 **실제로 실천한 배려**를 기록해 주세요.")
 
 action = st.text_input("배려 행동 기록하기", placeholder="예: 친구에게 모르는 문제 알려주기, 복도에서 조용히 걷기")
