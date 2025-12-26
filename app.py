@@ -3,7 +3,7 @@ from openai import OpenAI
 from datetime import datetime
 
 # 1. 앱 설정 (여고 감성 핑크 파스텔)
-st.set_page_config(page_title="우리 반 마음 온도", page_icon="🌷")
+st.set_page_config(page_title="우리 반 마음 온도", page_icon="🪴")
 st.markdown("""
     <style>
     .main { background-color: #fff5f8; }
@@ -23,7 +23,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 
 # --- 사이드바: 우리 반 상태 ---
-st.sidebar.title("🏫 우리 반 대시보드")
+st.sidebar.title("🏫 우리 반 어항")
 
 temp = st.session_state.total_score
 st.sidebar.metric("마음 온도", f"{temp:.1f} °C")
@@ -39,14 +39,14 @@ if temp >= 80:
     st.sidebar.success("축하해요! 고래가 나타났어요! 🎉")
 
 # --- 메인 화면 ---
-st.title("🌷 바른 마음 프로젝트")
+st.title("🪴 바른 마음 프로젝트")
 st.write("오늘 우리 반을 위해 **실제로 실천한 배려**를 기록해 주세요.")
 
 action = st.text_input("배려 행동 기록하기", placeholder="예: 친구에게 모르는 문제 알려주기, 복도에서 조용히 걷기")
 
 if st.button("마음 온도 올리기 ✨"):
     if action:
-        with st.spinner('AI 벤담이 분석 중...'):
+        with st.spinner('AI 분석 중...'):
             try:
                 response = client.chat.completions.create(
                     model="gpt-4o-mini",
