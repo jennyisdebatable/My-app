@@ -10,7 +10,7 @@ st.markdown("""
     .stButton>button { background-color: #ffb7c5; color: white; border-radius: 20px; border: none; }
     .stProgress > div > div > div > div { background-color: #ffb7c5; }
     </style>
-    """, unsafe_allow_name_checked=True)
+    """, unsafe_allow_html=True)
 
 # 2. AI 연결
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
