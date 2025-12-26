@@ -22,7 +22,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 
 # --- 사이드바: 우리 반 상태 ---
-st.sidebar.title("🏫 우리 반 마음 대시보드")
+st.sidebar.title("🏫 우리 반 어항")
 st.sidebar.write("### 현재 마음 온도")
 
 # 온도에 따른 귀여운 이모지 변화
